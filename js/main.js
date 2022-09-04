@@ -1,6 +1,3 @@
-const deleteBtn = document.querySelectorAll('.del')
-const todoItem = document.querySelectorAll('span.not')
-const todoComplete = document.querySelectorAll('span.completed')
 
 const startBtn = document.querySelector('#start')
 const sessionValue = document.querySelectorAll('.sessionValue')
@@ -12,19 +9,6 @@ const reset = document.querySelector('#reset')
 reset.addEventListener('click', reSet)
 startBtn.addEventListener('click', twentyFiveMinutesTimer)
 
-
-//loop through array of elements and listen for events
-Array.from(deleteBtn).forEach((el)=>{
-    el.addEventListener('click', deleteTodo)
-})
-
-Array.from(todoItem).forEach((el)=>{
-    el.addEventListener('click', markComplete)
-})
-
-Array.from(todoComplete).forEach((el)=>{
-    el.addEventListener('click', markIncomplete)
-})
 
 
 
@@ -163,7 +147,7 @@ function fiveMinutesBreakTimer(){
                 
                 
             }else{
-                document.querySelector('.sessionValue').innerHTML = counts
+                // document.querySelector('.sessionValue').innerHTML = counts
                 document.querySelector('.countdownSeconds').innerHTML = add_leading_zero(formattedBreakSeconds)
                 document.querySelector('.countdownMinutes').innerHTML = add_leading_zero(formattedBreakMinutes)
             
